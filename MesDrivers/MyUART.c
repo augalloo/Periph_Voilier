@@ -52,6 +52,8 @@ return USART->DR ;
 
 
 
+// Interruptions pour les différents Usart : si le pointeur pointe sur une fonction (appelée dans l'initialisation en paramètre), alors elle est exécutée
+
 void USART1_IRQHandler() {
 	//on baisse le flag direct
 	USART1->SR &= ~USART_SR_RXNE ;
