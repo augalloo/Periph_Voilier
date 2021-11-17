@@ -19,20 +19,20 @@ MyUSART_Struct_TypeDef uart_test ;
 ADC_TypeDef * ADCtension_batterie ;
 
 char * mot = "Batterie faible\n";
-signed char toto;
+signed char vitesse_bateau;
 char channel;
 
 
 void Reception_USART (void){
-	toto= MyUART(uart_test.USART);
+	vitesse_bateau= MyUART(uart_test.USART);
 	
-	if (toto <= 0) {
+	if (vitesse_bateau <= 0) {
 		GPIO_bds.GPIO->ODR &= ~GPIO_ODR_ODR7 ;
-		toto = - toto;
-		Cycle_PWM(timer_uart.Timer, channel, toto) ;
-	} else if (toto > 0) {
+		vitesse_bateau = - vitesse_bateau;
+		Cycle_PWM(timer_uart.Timer, channel, vitesse_bateau) ;
+	} else if (vitesse_bateau > 0) {
 		GPIO_bds.GPIO->ODR = GPIO_ODR_ODR7 ;
-		Cycle_PWM(timer_uart.Timer, channel, toto) ;
+		Cycle_PWM(timer_uart.Timer, channel, vitesse_bateau) ;
 	}
 }
 
@@ -56,6 +56,7 @@ int main(void)
 {
 	channel = 1;
 	
+	//On définit les pins utilisés par le GPIO en transmission et en réception
 	rx.GPIO = GPIOA ;
 	rx.GPIO_Pin = 10 ;
 	MyGPIO_Init (&rx);
@@ -88,9 +89,11 @@ int main(void)
 	tension_bat.GPIO_Conf = In_Analog ;
 	MyGPIO_Init (&tension_bat);
 	
+	// Définition et initialisation de l'ADC qui sera utilisé pour vérifier la tension de la batterie
 	ADCtension_batterie = ADC1 ;
 	MyADC_Init (ADCtension_batterie);
 	
+	// Fonction pour le cap du bateau : vitesse et sens
 	timer_uart.Timer = TIM4;
 	timer_uart.PSC=0;
 	timer_uart.ARR=720;
@@ -99,7 +102,7 @@ int main(void)
 	MyTimer_PWM(timer_uart.Timer, channel) ;
 	Lancer_PWM(timer_uart.Timer, channel);
 	
-
+	//  Fonction pour la transmission de l'information vers la tablette : on envoie un message si la batterie est trop faible
 	timer_transinfo.Timer = TIM1;
 	timer_transinfo.PSC=7199;
 	timer_transinfo.ARR=29999;
