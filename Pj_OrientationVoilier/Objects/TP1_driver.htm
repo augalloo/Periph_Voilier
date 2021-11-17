@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\TP1_driver.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\TP1_driver.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 10 09:43:05 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 17 10:50:01 2021
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -65,7 +65,7 @@ Function Pointers
  <LI><a href="#[12]">RCC_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[36]">RTCAlarm_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[10]">RTC_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[3a]">Reception_USART</a> from principal.o(i.Reception_USART) referenced from principal.o(i.main)
+ <LI><a href="#[3a]">Reception_USART</a> from main.o(i.Reception_USART) referenced from main.o(i.main)
  <LI><a href="#[3b]">Reset_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[30]">SPI1_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[31]">SPI2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
@@ -494,13 +494,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3a]"></a>Reception_USART</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, principal.o(i.Reception_USART))
+<P><STRONG><a name="[3a]"></a>Reception_USART</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, main.o(i.Reception_USART))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Reception_USART &rArr; Cycle_PWM
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cycle_PWM
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> principal.o(i.main)
+<BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>
 <P><STRONG><a name="[38]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
@@ -544,7 +544,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, principal.o(i.main))
+<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = main &rArr; MyUART_Init &rArr; __aeabi_d2uiz
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_Init

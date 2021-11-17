@@ -22,20 +22,20 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 U:\Peripheriques_groupe\Periph_Voilier\Pj_TransmissionInfo\Pj_TransmissionInfo.uvprojx
-Project File Date:  11/10/2021
+Project File Date:  11/17/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Simulé'
+Rebuild target 'Réel'
 assembling startup_stm32f10x_md.s...
+compiling MyADC.c...
+compiling MyUART.c...
+compiling main.c...
 compiling system_stm32f10x.c...
 compiling Driver_GPIO.c...
-compiling MyADC.c...
-compiling principal.c...
-compiling MyUART.c...
 compiling MyTimer.c...
 linking...
-Program Size: Code=4128 RO-data=284 RW-data=72 ZI-data=1664  
+Program Size: Code=4156 RO-data=288 RW-data=68 ZI-data=1660  
 ".\Objects\TP1_driver.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -54,7 +54,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103RB
-  .\RTE\_Simul_
+  .\RTE\_R_el
   C:\Programdata\Keil\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
   C:\Programdata\Keil\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
 
@@ -63,11 +63,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\system_stm32f10x.c
-Build Time Elapsed:  00:00:01
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

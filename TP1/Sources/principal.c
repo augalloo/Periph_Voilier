@@ -17,14 +17,14 @@ ADC_TypeDef * ADCtension_batterie ;
 
 
 
-char * mot = "Batterie faible";
+char * mot = "Batterie faible\n";
 
 void Test_batterie (void){
 	int i = 0;
 	int max = 2^12 - 1 ;
 	int tension;
-	tension = MyADC_Start(ADCtension_batterie, 10);
-	
+	//tension = MyADC_Start(ADCtension_batterie, 10);
+	tension = 0.1*max;
 	if (tension < 0.2*max) {
 		while(mot[i] != '\0') {	
 			uart_trans.USART->DR = mot[i];

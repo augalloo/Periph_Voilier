@@ -75,7 +75,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>1</IsCurrentTarget>
+        <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
       <CpuCode>18</CpuCode>
       <DebugOpt>
@@ -264,7 +264,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>0</IsCurrentTarget>
+        <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>18</CpuCode>
       <DebugOpt>
@@ -344,9 +344,9 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
-        <aSer1>0</aSer1>
+        <aSer1>1</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
         <viewmode>1</viewmode>
@@ -358,7 +358,7 @@
         <AscS3>0</AscS3>
         <aSer3>0</aSer3>
         <eProf>0</eProf>
-        <aLa>0</aLa>
+        <aLa>1</aLa>
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
         <aSer4>0</aSer4>
@@ -403,8 +403,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\TP1\Sources\principal.c</PathWithFileName>
-      <FilenameWithoutPath>principal.c</FilenameWithoutPath>
+      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\Pj_OrientationVoilier\Source\main.c</PathWithFileName>
+      <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -423,8 +423,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyADC.c</PathWithFileName>
-      <FilenameWithoutPath>MyADC.c</FilenameWithoutPath>
+      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\Driver_GPIO.c</PathWithFileName>
+      <FilenameWithoutPath>Driver_GPIO.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -435,8 +435,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyTimer.c</PathWithFileName>
-      <FilenameWithoutPath>MyTimer.c</FilenameWithoutPath>
+      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyADC.c</PathWithFileName>
+      <FilenameWithoutPath>MyADC.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -447,8 +447,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyUART.c</PathWithFileName>
-      <FilenameWithoutPath>MyUART.c</FilenameWithoutPath>
+      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyTimer.c</PathWithFileName>
+      <FilenameWithoutPath>MyTimer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -459,8 +459,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\Driver_GPIO.c</PathWithFileName>
-      <FilenameWithoutPath>Driver_GPIO.c</FilenameWithoutPath>
+      <PathWithFileName>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyUART.c</PathWithFileName>
+      <FilenameWithoutPath>MyUART.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

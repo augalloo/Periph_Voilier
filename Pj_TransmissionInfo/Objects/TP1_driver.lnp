@@ -1,5 +1,5 @@
 --cpu Cortex-M3
-".\objects\principal.o"
+".\objects\main.o"
 ".\objects\driver_gpio.o"
 ".\objects\myadc.o"
 ".\objects\mytimer.o"

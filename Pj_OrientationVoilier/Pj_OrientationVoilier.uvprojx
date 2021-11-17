@@ -384,9 +384,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>principal.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\TP1\Sources\principal.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\Pj_OrientationVoilier\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -394,24 +394,24 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
+              <FileName>Driver_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\Driver_GPIO.c</FilePath>
+            </File>
+            <File>
               <FileName>MyADC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyADC.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyADC.c</FilePath>
             </File>
             <File>
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyTimer.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyTimer.c</FilePath>
             </File>
             <File>
               <FileName>MyUART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyUART.c</FilePath>
-            </File>
-            <File>
-              <FileName>Driver_GPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\Driver_GPIO.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyUART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -801,9 +801,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>principal.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\TP1\Sources\principal.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\Pj_OrientationVoilier\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -811,24 +811,24 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
+              <FileName>Driver_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\Driver_GPIO.c</FilePath>
+            </File>
+            <File>
               <FileName>MyADC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyADC.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyADC.c</FilePath>
             </File>
             <File>
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyTimer.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyTimer.c</FilePath>
             </File>
             <File>
               <FileName>MyUART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\MyUART.c</FilePath>
-            </File>
-            <File>
-              <FileName>Driver_GPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>\\netapp2\grosse\Peripheriques_groupe\MesDrivers\Driver_GPIO.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\MesDrivers\MyUART.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -384,9 +384,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>principal.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\TP1\Sources\principal.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\Pj_TransmissionInfo\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -801,9 +801,9 @@
           <GroupName>MesSources</GroupName>
           <Files>
             <File>
-              <FileName>principal.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\TP1\Sources\principal.c</FilePath>
+              <FilePath>\\netapp2\grosse\Peripheriques_groupe\Periph_Voilier\Pj_TransmissionInfo\Source\main.c</FilePath>
             </File>
           </Files>
         </Group>

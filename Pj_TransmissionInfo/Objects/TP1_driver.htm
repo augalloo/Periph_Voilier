@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\TP1_driver.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\TP1_driver.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 10 11:52:33 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Nov 17 11:43:02 2021
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -79,7 +79,7 @@ Function Pointers
  <LI><a href="#[29]">TIM2_IRQHandler</a> from mytimer.o(i.TIM2_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[2a]">TIM3_IRQHandler</a> from mytimer.o(i.TIM3_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[2b]">TIM4_IRQHandler</a> from mytimer.o(i.TIM4_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[3a]">Test_batterie</a> from principal.o(i.Test_batterie) referenced from principal.o(i.main)
+ <LI><a href="#[3a]">Test_batterie</a> from main.o(i.Test_batterie) referenced from main.o(i.main)
  <LI><a href="#[32]">USART1_IRQHandler</a> from myuart.o(i.USART1_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[33]">USART2_IRQHandler</a> from myuart.o(i.USART2_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[34]">USART3_IRQHandler</a> from myuart.o(i.USART3_IRQHandler) referenced from startup_stm32f10x_md.o(RESET)
@@ -517,7 +517,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[3a]"></a>Test_batterie</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, principal.o(i.Test_batterie))
+<P><STRONG><a name="[3a]"></a>Test_batterie</STRONG> (Thumb, 114 bytes, Stack size 40 bytes, main.o(i.Test_batterie))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Test_batterie &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
@@ -525,7 +525,7 @@ Global Symbols
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyADC_Start
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> principal.o(i.main)
+<BR>[Address Reference Count : 1]<UL><LI> main.o(i.main)
 </UL>
 <P><STRONG><a name="[32]"></a>USART1_IRQHandler</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, myuart.o(i.USART1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USART1_IRQHandler
@@ -542,7 +542,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, principal.o(i.main))
+<P><STRONG><a name="[47]"></a>main</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = main &rArr; MyUART_Init &rArr; __aeabi_d2uiz
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MyUART_Init

@@ -1,38 +1,79 @@
 #include "stm32f10x.h"
-#include "MyTimer.h"
 #include "Driver_GPIO.h"
+#include "MyTimer.h"
 #include "MyUART.h"
+#include "MyADC.h"
 
+MyGPIO_Struct_TypeDef rx ;
+MyGPIO_Struct_TypeDef tx ;
+MyGPIO_Struct_TypeDef GPIO_PWM ;
+MyGPIO_Struct_TypeDef GPIO_bds ;
 
-//	static MyTimer_Struct_TypeDef test;
-//	static MyTimer_Struct_TypeDef test2;
+MyUSART_Struct_TypeDef uart_test ;
+MyTimer_Struct_TypeDef timer_uart;
 
-	//void Callback (void){
-	//	MyGPIO_Toggle(GPIO_Struct.GPIO,1);
-	//}
+signed char toto;
+char channel;
+
+MyGPIO_Struct_TypeDef  GPIO_Struct;
 	
-
-int main() {
-
-/// Test PWM
-//	test2.Timer = TIM3;
-//	test2.PSC=1;
-//	test2.ARR=359;
-//	MyTimer_Base_Init(&test2);
-//	MyTimer_PWM(test2.Timer, 4) ;
-//	MyTimer_DutyCycle(test2.Timer, 90) ;
-//	
-//	MyTimer_Base_Start(test2.Timer);
-//	
-	/*
-	On utilise nos fonctions de MyTimer.h pour gérer les interruptions des timers
-	et appeler la fonction définie/programmée par l'utilisateur dans le main
-	*/
-	//MyTimer_ActiveIT(test.Timer, 2, Callback ); 
-	//MyTimer_ActiveIT(test2.Timer, 3, C2 ); 
+void Reception_USART (void){
+	toto= MyUART(uart_test.USART);
 	
-
-
-	while(1) {
+	if (toto <= 0) {
+		GPIO_bds.GPIO->ODR &= ~GPIO_ODR_ODR7 ;
+		toto = - toto;
+		Cycle_PWM(timer_uart.Timer, channel, toto) ;
+	} else if (toto > 0) {
+		GPIO_bds.GPIO->ODR = GPIO_ODR_ODR7 ;
+		Cycle_PWM(timer_uart.Timer, channel, toto) ;
 	}
+	//Cycle_PWM(timer_uart.Timer, channel, toto) ;
+}
+
+int main(void)
+{
+	channel = 1;
+	
+	rx.GPIO = GPIOA ;
+	rx.GPIO_Pin = 10 ;
+	MyGPIO_Init (&rx);
+	tx.GPIO = GPIOA ;
+	tx.GPIO_Pin = 9 ;
+	MyGPIO_Init (&tx);
+	
+	uart_test.RX = rx ;
+	uart_test.TX = tx ;
+	uart_test.debit = 9600 ;
+	uart_test.priorite = 3 ;
+	uart_test.USART = USART1 ;
+	
+	// Port GPIO PWM Rotation plateau
+	GPIO_PWM.GPIO = GPIOB ;
+	GPIO_PWM.GPIO_Pin = 6 ;
+	GPIO_PWM.GPIO_Conf = AltOut_Ppull ;
+	MyGPIO_Init (&GPIO_PWM);
+	
+	// Port GPIO bit de sens plateau
+	GPIO_bds.GPIO = GPIOB ;
+	GPIO_bds.GPIO_Pin = 7 ;
+	GPIO_bds.GPIO_Conf = Out_Ppull ;
+	MyGPIO_Init (&GPIO_bds);
+	
+
+	MyUART_Init(uart_test, Reception_USART);
+	
+	timer_uart.Timer = TIM4;
+	timer_uart.PSC=0;
+	timer_uart.ARR=720;
+	MyTimer_Base_Init(&timer_uart);
+	MyTimer_Base_Start(timer_uart.Timer);
+	MyTimer_PWM(timer_uart.Timer, channel) ;
+	Lancer_PWM(timer_uart.Timer, channel);
+	
+	
+	do
+	{
+		
+	}while(1) ;
 }
